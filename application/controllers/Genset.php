@@ -1,20 +1,20 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-class Panel extends CI_Controller
+class Genset extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model("model_panel");
+        $this->load->model("model_genset");
         $this->load->library('form_validation');
     }
     public function index()
     {
-        $data['sp_panel'] = $this->model_panel->tampil_data();
+        $data['sp_genset'] = $this->model_genset->tampil_data();
         $this->load->view('template/head');
         $this->load->view('template/sidebar');
         $this->load->view('template/topbar');
-        $this->load->view('panel', $data);
+        $this->load->view('genset', $data);
         $this->load->view('template/footer');
     }
 
@@ -23,7 +23,7 @@ class Panel extends CI_Controller
         $this->load->view('template/head');
         $this->load->view('template/sidebar');
         $this->load->view('template/topbar');
-        $this->load->view('panel/input');
+        $this->load->view('genset/input');
         $this->load->view('template/footer');
     }
 
@@ -31,35 +31,35 @@ class Panel extends CI_Controller
     {
         $tanggal = $this->input->post('tanggal');
         $kode_barang = $this->input->post('kode_barang');
-        $konfig = $this->input->post('konfigurasi');
-        $star = $this->input->post('star_delta');
-        $do = $this->input->post('direct_online');
-        $kb = $this->input->post('kapasitas_beban');
+        $mg = $this->input->post('merk_generator');
+        $mm = $this->input->post('merk_mesin');
+        $kg = $this->input->post('kapasitas_generator');
+        $kondisi = $this->input->post('kondisi');
 
         $data = array(
             'tanggal' => $tanggal,
             'kode_barang' => $kode_barang,
-            'konfigurasi' => $konfig,
-            'star_delta' => $star,
-            'direct_online' => $do,
-            'kapasitas_beban' => $kb
+            'merk_generator' => $mg,
+            'merk_mesin' => $mm,
+            'kapasitas_generator' => $kg,
+            'kondisi' => $kondisi
         );
-        $this->model_panel->input_data($data, 'sp_panel');
-        redirect('Panel/index');
+        $this->model_genset->input_data($data, 'sp_genset');
+        redirect('Genset/index');
     }
 
 
     public function edit($id)
     {
-        $get_panel = $this->model_panel->get_by_id($id);
+        $get_genset = $this->model_genset->get_by_id($id);
         $data = array(
-            'panel' => $get_panel
+            'genset' => $get_genset
         );
 
         $this->load->view('template/head');
         $this->load->view('template/sidebar');
         $this->load->view('template/topbar');
-        $this->load->view('panel/edit', $data);
+        $this->load->view('genset/edit', $data);
         $this->load->view('template/footer');
     }
     public function update()
@@ -67,34 +67,34 @@ class Panel extends CI_Controller
         $id = $this->input->post('id');
         $tanggal = $this->input->post('tanggal');
         $kode_barang = $this->input->post('kode_barang');
-        $konfig = $this->input->post('konfigurasi');
-        $star = $this->input->post('star_delta');
-        $do = $this->input->post('direct_online');
-        $kb = $this->input->post('kapasitas_beban');
+        $mg = $this->input->post('merk_generator');
+        $mm = $this->input->post('merk_mesin');
+        $kg = $this->input->post('kapasitas_generator');
+        $kondisi = $this->input->post('kondisi');
 
         $data = array(
             'tanggal' => $tanggal,
             'kode_barang' => $kode_barang,
-            'konfigurasi' => $konfig,
-            'star_delta' => $star,
-            'direct_online' => $do,
-            'kapasitas_beban' => $kb
+            'merk_generator' => $mg,
+            'merk_mesin' => $mm,
+            'kapasitas_generator' => $kg,
+            'kondisi' => $kondisi
         );
-        $this->model_panel->update($id, $data);
-        redirect('Panel/index');
+        $this->model_genset->update($id, $data);
+        redirect('Genset/index');
     }
 
     public function delete($id)
     {
-        $row = $this->model_panel->get_by_id($id);
+        $row = $this->model_genset->get_by_id($id);
 
         if ($row) {
-            $this->model_panel->delete($id);
+            $this->model_genset->delete($id);
             $this->session->set_flashdata('message', 'Delete Record Success');
-            redirect('Panel/index');
+            redirect('Genset/index');
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect('Panel/index');
+            redirect('Genset/index');
         }
         
     }
