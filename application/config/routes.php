@@ -53,3 +53,5 @@ $route['default_controller'] = 'Dashboard';
 // $route['dashboard_kasubag'] = 'user/Dashboard';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// $route['default_controller'] = 'pdf';

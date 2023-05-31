@@ -17,24 +17,16 @@
                                     <input type="text" class="form-control" id="exampleInputDaya" name="nama_barang" value="<?= $aset->nama_barang ?>" require>
                                 </div>                                
                                 <div class="mb-3">
-                                    <label for="exampleInputUraian" class="form-label">Jenis Aset</label>
-                                    <input type="text" class="form-control" id="exampleInputUraian" name="jenis_aset" value="<?= $aset->jenis_aset ?>" require>
-                                </div>
-                                <div class="mb-3">
                                     <label for="exampleInputDaya" class="form-label">Merk / Type</label>
                                     <input type="text" class="form-control" id="exampleInputDaya" name="merk" value="<?= $aset->merk ?>" require>
-                                </div>                             
-                                <div class="mb-3">
-                                    <label for="exampleInputUraian" class="form-label">Jumlah</label>
-                                    <input type="text" class="form-control" id="exampleInputUraian" name="jumlah" value="<?= $aset->jumlah ?>" require>
-                                </div>   
+                                </div>                               
                                 <div class="mb-3">
                                     <label for="exampleInputUraian" class="form-label">Harga</label>
                                     <input type="text" class="form-control" id="exampleInputUraian" name="harga" value="<?= $aset->harga ?>" require>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputDaya" class="form-label">Status</label>
-                                    <input type="text" class="form-control" id="exampleInputDaya" name="status" value="<?= $aset->status ?>" require>
+                                    <label for="exampleInputDaya" class="form-label">Jangka Penggunaan</label>
+                                    <input type="text" class="form-control" id="exampleInputDaya" name="jangka_penggunaan" value="<?= $aset->jangka_penggunaan ?>" require>
                                 </div>                                
                                 
                                 <div class="mb-3">
@@ -42,20 +34,12 @@
                                     <input type="date" class="form-control" id="exampleInputTanggal" name="tanggal_masuk" value="<?= $aset->tanggal_masuk ?>" require>
                                 </div>                                
                                 <div class="mb-3">
-                                    <label for="exampleInputDaya" class="form-label">Lokasi Pemasangan</label>
-                                    <input type="text" class="form-control" id="exampleInputDaya" name="lokasi_pemasangan" value="<?= $aset->lokasi_pemasangan ?>" require>
-                                </div>
-                                <div class="mb-3">
                                     <label for="exampleInputNamaKaryawan" class="form-label">Penanggung Jawab</label>
                                     <input type="text" class="form-control" id="exampleInputNamaKaryawan" name="penanggung_jawab" value="<?= $aset->penanggung_jawab ?>" require>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputUraian" class="form-label">Kondisi</label>
                                     <input type="text" class="form-control" id="exampleInputUraian" name="kondisi" value="<?= $aset->kondisi ?>" require>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputUraian" class="form-label">Jadwal Penyusutan</label>
-                                    <input type="date" class="form-control" id="exampleInputUraian" name="jadwal_penyusutan" value="<?= $aset->jadwal_penyusutan ?>" require>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputNamaKaryawan" class="form-label">Gambar</label>
