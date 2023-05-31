@@ -92,7 +92,7 @@ class model_aset extends CI_Model
         $tanggal_masuk = date("Y-m-d H:i:s");
         $penanggung_jawab = $this->input->post('penanggung_jawab');
         $kondisi = $this->input->post('kondisi');
-        $gambar = $upload["file"]["file_name"];
+        $gambar = $upload['file']['file_name'];
 
         $data = array(
             'kode_barang' => $kode_barang,
@@ -105,7 +105,7 @@ class model_aset extends CI_Model
             'kondisi' => $kondisi,
             'gambar' => $gambar
         );
-        $this->db->insert( 'tbl_aset', $data);
+        $this->db->insert('tbl_aset', $data);
     }
 
     public function updateAset($gambar, $id)

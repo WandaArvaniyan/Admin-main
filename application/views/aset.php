@@ -1,3 +1,4 @@
+<?php echo $this->session->flashdata('upload'); ?>
 <div class="container-fluid">
     <!--  Row 1 -->
     <div class="row">
@@ -13,12 +14,11 @@
 			    <div class="input-group">
 	                <input type="text" class="form-control" name="keyword" placeholder="Masukan Kata Kunci...">
 	                <span class="input-group-btn">
-	                    <button class="btn btn-default" type="submit">Cari</button>
+	                    <button class="btn btn-default" type="submit">cari</button>
 	                </span>
 	            </div>
         	</form>
         </div>
-
                 <table class="table">
                     <thead>
                         <tr>
@@ -54,7 +54,7 @@
                                 <td><Img Style="Width: 200px" Src="<?= base_url();?>assets/images/upload/<?= $a['gambar'];?>"></td>
                                 <td>
                                     <a href="<?php echo site_url('Aset/edit/' . $a['id']) ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-                                    <a onclick="deleteConfirm('Apa Jadi Di Hapus??')" href="<?= base_url('Aset/delete/' . $a['id']) ?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
+                                    <a onclick="return confirm('Apa Jadi Di Hapus??')" href="<?= base_url('Aset/delete/' . $a['id']) ?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
                                 </td>
                             </tr>
                         <?php

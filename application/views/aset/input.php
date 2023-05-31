@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputNamaKaryawan" class="form-label">Gambar</label>
-                                    <input type="file" class="form-control" id="exampleInputNamaKaryawan" name="gambar" >
+                                    <input type="file" class="form-control" id="exampleInputNamaKaryawan" name="gambar" value="<?php echo set_value('gambar'); ?>">
                                 </div>
                                 <button type="submit" class="btn btn-primary" value="Tambah">Submit</button>
                             </form>

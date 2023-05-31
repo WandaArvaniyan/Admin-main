@@ -29,7 +29,7 @@ class Perawatan extends CI_Controller
 
     function tambah_aksi()
     {
-        $tanggal = $this->input->post('tanggal');
+        $tanggal = date("Y-m-d H:i:s");
         $kode_barang = $this->input->post('kode_barang');
         $uraian = $this->input->post('uraian');
         $gambar = $this->input->post('gambar');

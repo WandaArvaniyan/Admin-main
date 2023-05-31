@@ -8,10 +8,10 @@
                     <div class="card">
                         <div class="card-body">
                             <form action="<?= base_url(); ?>Perawatan/tambah_aksi" method="post">
-                            <div class="mb-3">
+                            <!-- <div class="mb-3">
                                     <label for="exampleInputTanggal" class="form-label">Tanggal</label>
                                     <input type="date" class="form-control" id="exampleInputTanggal" name="tanggal">
-                                </div>
+                                </div> -->
                                 <div class="mb-3">
                                     <label for="exampleInputDaya" class="form-label">Kode Barang</label>
                                     <input type="text" class="form-control" id="exampleInputDaya" name="kode_barang">
