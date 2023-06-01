@@ -46,12 +46,12 @@
                                 <td><?= $a['nama_barang'] ?></td>
                                 <td><?= $a['merk'] ?></td>
                                 <td>Rp. <?= $a['harga'] ?></td>
-                                <td><?= $a['jangka_penggunaan'] ?></td>
+                                <td><?= $a['jangka_penggunaan']?> Hari</td>
                                 <td><?= $a['tanggal_masuk'] ?></td>
                                 <td><?= $a['penanggung_jawab'] ?></td> 
                                 <td><?= $a['kondisi'] ?></td>
                                
-                                <td><Img Style="Width: 200px" Src="<?= base_url();?>assets/images/upload/<?= $a['gambar'];?>"></td>
+                                <td><img style="height: 100px" src="<?= base_url();?>assets/images/upload/aset/<?= $a['gambar'];?>"></td>
                                 <td>
                                     <a href="<?php echo site_url('Aset/edit/' . $a['id']) ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
                                     <a onclick="return confirm('Apa Jadi Di Hapus??')" href="<?= base_url('Aset/delete/' . $a['id']) ?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>

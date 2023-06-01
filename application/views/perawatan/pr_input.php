@@ -7,7 +7,7 @@
                 <h5 class="card-title fw-semibold mb-4">Form Tambah Data</h5>
                     <div class="card">
                         <div class="card-body">
-                            <form action="<?= base_url(); ?>Perawatan/tambah_aksi" method="post">
+                            <form action="<?= base_url(); ?>Perawatan/tambah_aksi" method="post" enctype="multipart/form-data">
                             <!-- <div class="mb-3">
                                     <label for="exampleInputTanggal" class="form-label">Tanggal</label>
                                     <input type="date" class="form-control" id="exampleInputTanggal" name="tanggal">
@@ -22,8 +22,8 @@
                                     <input type="text" class="form-control" id="exampleInputUraian" name="uraian">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputNamaKaryawan" class="form-label">Gambar</label>
-                                    <input type="file" class="form-control" id="exampleInputNamaKaryawan" name="gambar">
+                                    <label for="gambar" class="form-label">Gambar</label>
+                                    <input type="file" class="form-control" id="gambar" name="gambar" value="<?php echo set_value('gambar'); ?>">
                                 </div>
                                 <button type="submit" class="btn btn-primary" value="Tambah">Submit</button>
                             </form>

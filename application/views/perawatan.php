@@ -28,10 +28,10 @@
                                 <td><?= $p['tanggal'] ?></td>
                                 <td><?= $p['kode_barang'] ?></td>
                                 <td><?= $p['uraian'] ?></td>
-                                <td><img scr="<?php echo base_url('./assets/images/upload/prawatan'. $p['gambar']);?>"> </td>
+                                <td><img style="height: 100px" src="<?= base_url();?>assets/images/upload/perawatan/<?= $p['gambar'];?>"></td>
                                 <td>
                                     <a href="<?php echo site_url('Perawatan/edit/' . $p['id']) ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-                                    <a onclick="deleteConfirm('Apa Jadi Di Hapus??')" href="<?= base_url('Perawatan/delete/' . $p['id']) ?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
+                                    <a onclick="return confirm('Apa Jadi Di Hapus??')" href="<?= base_url('Perawatan/delete/' . $p['id']) ?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
                                 </td>
                             </tr>
                         <?php

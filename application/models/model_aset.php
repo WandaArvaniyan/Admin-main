@@ -66,7 +66,7 @@ class model_aset extends CI_Model
     //upload gambar
     public function uploadImg(){
 
-        $config['upload_path'] = './assets/images/upload/';
+        $config['upload_path'] = './assets/images/upload/aset/';
         $config['allowed_types'] = 'jpg|png|jpeg|image/jpg|image/png|image/jpeg';
         $config['max_size'] = '5000';
         $config['file_name'] =round(microtime(true)*1000);
@@ -82,14 +82,21 @@ class model_aset extends CI_Model
 
     }
 
+    //aksi tambah data
     public function insertAset($upload)
     {
         $kode_barang = $this->input->post('kode_barang');
         $nama_barang = $this->input->post('nama_barang');
         $merk = $this->input->post('merk');
-        $harga = $this->input->post('harga');
-        $jangka = $this->input->post('jangka_penggunaan');
-        $tanggal_masuk = date("Y-m-d H:i:s");
+        $harga = $this->input->post('harga');       
+        $tanggal_masuk = $this->input->post('tanggal_masuk');
+        // Tanggal sekarang
+        $tanggal_sekarang = time();
+        // Menghitung selisih waktu dalam detik
+        $selisih_waktu = $tanggal_sekarang - strtotime($tanggal_masuk);
+        // Mengkonversi selisih waktu ke dalam format yang diinginkan
+        $jangka = floor($selisih_waktu / (60 * 60 * 24));
+        // $jangka = $tanggal_sekarang - $tanggal_masuk;
         $penanggung_jawab = $this->input->post('penanggung_jawab');
         $kondisi = $this->input->post('kondisi');
         $gambar = $upload['file']['file_name'];
